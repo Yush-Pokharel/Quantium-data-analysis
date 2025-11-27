@@ -1,0 +1,70 @@
+Data Profiling 
+
+--------------------------------------------------
+
+Dataframe of QVI_purchase_behaviour.csv
+   LYLTY_CARD_NBR               LIFESTAGE PREMIUM_CUSTOMER
+0            1000   YOUNG SINGLES/COUPLES          Premium
+1            1002   YOUNG SINGLES/COUPLES       Mainstream
+2            1003          YOUNG FAMILIES           Budget
+3            1004   OLDER SINGLES/COUPLES       Mainstream
+4            1005  MIDAGE SINGLES/COUPLES       Mainstream
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 72637 entries, 0 to 72636
+Data columns (total 3 columns):
+ #   Column            Non-Null Count  Dtype 
+---  ------            --------------  ----- 
+ 0   LYLTY_CARD_NBR    72637 non-null  int64 
+ 1   LIFESTAGE         72637 non-null  object
+ 2   PREMIUM_CUSTOMER  72637 non-null  object
+dtypes: int64(1), object(2)
+memory usage: 1.7+ MB
+        LYLTY_CARD_NBR LIFESTAGE PREMIUM_CUSTOMER
+count     7.263700e+04     72637            72637
+unique             NaN         7                3
+top                NaN  RETIREES       Mainstream
+freq               NaN     14805            29245
+mean      1.361859e+05       NaN              NaN
+std       8.989293e+04       NaN              NaN
+min       1.000000e+03       NaN              NaN
+25%       6.620200e+04       NaN              NaN
+50%       1.340400e+05       NaN              NaN
+75%       2.033750e+05       NaN              NaN
+max       2.373711e+06       NaN              NaN
+
+Dataframe of QVI_transaction_data.xlsx
+    DATE  STORE_NBR  LYLTY_CARD_NBR  TXN_ID  PROD_NBR                                 PROD_NAME  PROD_QTY  TOT_SALES
+0  43390          1            1000       1         5    Natural Chip        Compny SeaSalt175g         2        6.0
+1  43599          1            1307     348        66                  CCs Nacho Cheese    175g         3        6.3
+2  43605          1            1343     383        61    Smiths Crinkle Cut  Chips Chicken 170g         2        2.9
+3  43329          2            2373     974        69    Smiths Chip Thinly  S/Cream&Onion 175g         5       15.0
+4  43330          2            2426    1038       108  Kettle Tortilla ChpsHny&Jlpno Chili 150g         3       13.8
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 264836 entries, 0 to 264835
+Data columns (total 8 columns):
+ #   Column          Non-Null Count   Dtype  
+---  ------          --------------   -----  
+ 0   DATE            264836 non-null  int64  
+ 1   STORE_NBR       264836 non-null  int64  
+ 2   LYLTY_CARD_NBR  264836 non-null  int64  
+ 3   TXN_ID          264836 non-null  int64  
+ 4   PROD_NBR        264836 non-null  int64  
+ 5   PROD_NAME       264836 non-null  object 
+ 6   PROD_QTY        264836 non-null  int64  
+ 7   TOT_SALES       264836 non-null  float64
+dtypes: float64(1), int64(6), object(1)
+memory usage: 16.2+ MB
+                 DATE     STORE_NBR  LYLTY_CARD_NBR  ...                               PROD_NAME       PROD_QTY      TOT_SALES
+count   264836.000000  264836.00000    2.648360e+05  ...                                  264836  264836.000000  264836.000000
+unique            NaN           NaN             NaN  ...                                     114            NaN            NaN
+top               NaN           NaN             NaN  ...  Kettle Mozzarella   Basil & Pesto 175g            NaN            NaN
+freq              NaN           NaN             NaN  ...                                    3304            NaN            NaN
+mean     43464.036260     135.08011    1.355495e+05  ...                                     NaN       1.907309       7.304200
+std        105.389282      76.78418    8.057998e+04  ...                                     NaN       0.643654       3.083226
+min      43282.000000       1.00000    1.000000e+03  ...                                     NaN       1.000000       1.500000
+25%      43373.000000      70.00000    7.002100e+04  ...                                     NaN       2.000000       5.400000
+50%      43464.000000     130.00000    1.303575e+05  ...                                     NaN       2.000000       7.400000
+75%      43555.000000     203.00000    2.030942e+05  ...                                     NaN       2.000000       9.200000
+max      43646.000000     272.00000    2.373711e+06  ...                                     NaN     200.000000     650.000000
+
+[11 rows x 8 columns]
